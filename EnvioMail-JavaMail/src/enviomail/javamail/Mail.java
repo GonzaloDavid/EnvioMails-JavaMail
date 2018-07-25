@@ -51,7 +51,7 @@ public class Mail {
             mimemessage.setContent(mensaje, "text/html");
 
             Transport t = session.getTransport();//conecta y envia el mensahje
-            t.connect("smtp.gmail.com", 445, from, pwd);
+            t.connect("smtp.gmail.com", 465, from, pwd);
             t.sendMessage(mimemessage, mimemessage.getRecipients(Message.RecipientType.TO));
             t.close();
         } catch (MessagingException ex) {
